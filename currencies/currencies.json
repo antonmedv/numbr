@@ -1,174 +1,690 @@
-[
-  "AED",
-  "AFN",
-  "ALL",
-  "AMD",
-  "ANG",
-  "AOA",
-  "ARS",
-  "AUD",
-  "AWG",
-  "AZN",
-  "BAM",
-  "BBD",
-  "BDT",
-  "BGN",
-  "BHD",
-  "BIF",
-  "BMD",
-  "BND",
-  "BOB",
-  "BRL",
-  "BSD",
-  "BTN",
-  "BWP",
-  "BYN",
-  "BYR",
-  "BZD",
-  "CAD",
-  "CDF",
-  "CDN",
-  "CHF",
-  "CLF",
-  "CLP",
-  "CNH",
-  "CNY",
-  "COP",
-  "CRC",
-  "CSK",
-  "CUC",
-  "CUP",
-  "CVE",
-  "CZK",
-  "DJF",
-  "DKK",
-  "DOP",
-  "DZD",
-  "EGP",
-  "ERN",
-  "ETB",
-  "EUR",
-  "FJD",
-  "FKP",
-  "GBP",
-  "GEL",
-  "GHS",
-  "GIP",
-  "GMD",
-  "GNF",
-  "GTQ",
-  "GYD",
-  "HKD",
-  "HNL",
-  "HRK",
-  "HTG",
-  "HUF",
-  "IDR",
-  "ILS",
-  "INR",
-  "IQD",
-  "IRR",
-  "ISK",
-  "JMD",
-  "JOD",
-  "JPY",
-  "KES",
-  "KGS",
-  "KHR",
-  "KMF",
-  "KPW",
-  "KRW",
-  "KWD",
-  "KYD",
-  "KZT",
-  "LAK",
-  "LBP",
-  "LKR",
-  "LRD",
-  "LSL",
-  "LTL",
-  "LVL",
-  "LYD",
-  "MAD",
-  "MDL",
-  "MGA",
-  "MKD",
-  "MMK",
-  "MNT",
-  "MOP",
-  "MRO",
-  "MUR",
-  "MVR",
-  "MWK",
-  "MXN",
-  "MYR",
-  "MZN",
-  "NAD",
-  "NGN",
-  "NIO",
-  "NOK",
-  "NPR",
-  "NZD",
-  "OMR",
-  "PAB",
-  "PEN",
-  "PGK",
-  "PHP",
-  "PKR",
-  "PLN",
-  "PYG",
-  "QAR",
-  "RMB",
-  "RON",
-  "RSD",
-  "RUB",
-  "RWF",
-  "SAR",
-  "SBD",
-  "SCR",
-  "SDG",
-  "SEK",
-  "SGD",
-  "SHP",
-  "SLL",
-  "SOS",
-  "SRD",
-  "SSP",
-  "STD",
-  "STN",
-  "SVC",
-  "SYP",
-  "SZL",
-  "THB",
-  "TJS",
-  "TMT",
-  "TND",
-  "TOP",
-  "TRY",
-  "TTD",
-  "TWD",
-  "TZS",
-  "UAH",
-  "UGX",
-  "USD",
-  "UYU",
-  "UZS",
-  "VEF",
-  "VND",
-  "VUV",
-  "WST",
-  "XAF",
-  "XAG",
-  "XAU",
-  "XCD",
-  "XDR",
-  "XOF",
-  "XPD",
-  "XPF",
-  "XPT",
-  "YER",
-  "ZAR",
-  "ZMK",
-  "ZMW",
-  "ZWL"
-]
+{
+  "AED": {
+    "name": "",
+    "dp": 2
+  },
+  "AFN": {
+    "name": "",
+    "dp": 2
+  },
+  "ALL": {
+    "name": "",
+    "dp": 2
+  },
+  "AMD": {
+    "name": "",
+    "dp": 2
+  },
+  "ANG": {
+    "name": "",
+    "dp": 2
+  },
+  "AOA": {
+    "name": "",
+    "dp": 2
+  },
+  "ARS": {
+    "name": "",
+    "dp": 2
+  },
+  "AUD": {
+    "name": "",
+    "dp": 2
+  },
+  "AWG": {
+    "name": "",
+    "dp": 2
+  },
+  "AZN": {
+    "name": "",
+    "dp": 2
+  },
+  "BAM": {
+    "name": "",
+    "dp": 2
+  },
+  "BBD": {
+    "name": "",
+    "dp": 2
+  },
+  "BDT": {
+    "name": "",
+    "dp": 2
+  },
+  "BGN": {
+    "name": "",
+    "dp": 2
+  },
+  "BHD": {
+    "name": "",
+    "dp": 2
+  },
+  "BIF": {
+    "name": "",
+    "dp": 2
+  },
+  "BMD": {
+    "name": "",
+    "dp": 2
+  },
+  "BND": {
+    "name": "",
+    "dp": 2
+  },
+  "BOB": {
+    "name": "",
+    "dp": 2
+  },
+  "BRL": {
+    "name": "",
+    "dp": 2
+  },
+  "BSD": {
+    "name": "",
+    "dp": 2
+  },
+  "BTN": {
+    "name": "",
+    "dp": 2
+  },
+  "BWP": {
+    "name": "",
+    "dp": 2
+  },
+  "BYN": {
+    "name": "",
+    "dp": 2
+  },
+  "BYR": {
+    "name": "",
+    "dp": 2
+  },
+  "BZD": {
+    "name": "",
+    "dp": 2
+  },
+  "CAD": {
+    "name": "",
+    "dp": 2
+  },
+  "CDF": {
+    "name": "",
+    "dp": 2
+  },
+  "CDN": {
+    "name": "",
+    "dp": 2
+  },
+  "CHF": {
+    "name": "",
+    "dp": 2
+  },
+  "CLF": {
+    "name": "",
+    "dp": 2
+  },
+  "CLP": {
+    "name": "",
+    "dp": 2
+  },
+  "CNH": {
+    "name": "",
+    "dp": 2
+  },
+  "CNY": {
+    "name": "",
+    "dp": 2
+  },
+  "COP": {
+    "name": "",
+    "dp": 2
+  },
+  "CRC": {
+    "name": "",
+    "dp": 2
+  },
+  "CSK": {
+    "name": "",
+    "dp": 2
+  },
+  "CUC": {
+    "name": "",
+    "dp": 2
+  },
+  "CUP": {
+    "name": "",
+    "dp": 2
+  },
+  "CVE": {
+    "name": "",
+    "dp": 2
+  },
+  "CZK": {
+    "name": "",
+    "dp": 2
+  },
+  "DJF": {
+    "name": "",
+    "dp": 2
+  },
+  "DKK": {
+    "name": "",
+    "dp": 2
+  },
+  "DOP": {
+    "name": "",
+    "dp": 2
+  },
+  "DZD": {
+    "name": "",
+    "dp": 2
+  },
+  "EGP": {
+    "name": "",
+    "dp": 2
+  },
+  "ERN": {
+    "name": "",
+    "dp": 2
+  },
+  "ETB": {
+    "name": "",
+    "dp": 2
+  },
+  "EUR": {
+    "name": "",
+    "dp": 2
+  },
+  "FJD": {
+    "name": "",
+    "dp": 2
+  },
+  "FKP": {
+    "name": "",
+    "dp": 2
+  },
+  "GBP": {
+    "name": "",
+    "dp": 2
+  },
+  "GEL": {
+    "name": "",
+    "dp": 2
+  },
+  "GHS": {
+    "name": "",
+    "dp": 2
+  },
+  "GIP": {
+    "name": "",
+    "dp": 2
+  },
+  "GMD": {
+    "name": "",
+    "dp": 2
+  },
+  "GNF": {
+    "name": "",
+    "dp": 2
+  },
+  "GTQ": {
+    "name": "",
+    "dp": 2
+  },
+  "GYD": {
+    "name": "",
+    "dp": 2
+  },
+  "HKD": {
+    "name": "",
+    "dp": 2
+  },
+  "HNL": {
+    "name": "",
+    "dp": 2
+  },
+  "HRK": {
+    "name": "",
+    "dp": 2
+  },
+  "HTG": {
+    "name": "",
+    "dp": 2
+  },
+  "HUF": {
+    "name": "",
+    "dp": 2
+  },
+  "IDR": {
+    "name": "",
+    "dp": 2
+  },
+  "ILS": {
+    "name": "",
+    "dp": 2
+  },
+  "INR": {
+    "name": "",
+    "dp": 2
+  },
+  "IQD": {
+    "name": "",
+    "dp": 2
+  },
+  "IRR": {
+    "name": "",
+    "dp": 2
+  },
+  "ISK": {
+    "name": "",
+    "dp": 2
+  },
+  "JMD": {
+    "name": "",
+    "dp": 2
+  },
+  "JOD": {
+    "name": "",
+    "dp": 2
+  },
+  "JPY": {
+    "name": "",
+    "dp": 2
+  },
+  "KES": {
+    "name": "",
+    "dp": 2
+  },
+  "KGS": {
+    "name": "",
+    "dp": 2
+  },
+  "KHR": {
+    "name": "",
+    "dp": 2
+  },
+  "KMF": {
+    "name": "",
+    "dp": 2
+  },
+  "KPW": {
+    "name": "",
+    "dp": 2
+  },
+  "KRW": {
+    "name": "",
+    "dp": 2
+  },
+  "KWD": {
+    "name": "",
+    "dp": 2
+  },
+  "KYD": {
+    "name": "",
+    "dp": 2
+  },
+  "KZT": {
+    "name": "",
+    "dp": 2
+  },
+  "LAK": {
+    "name": "",
+    "dp": 2
+  },
+  "LBP": {
+    "name": "",
+    "dp": 2
+  },
+  "LKR": {
+    "name": "",
+    "dp": 2
+  },
+  "LRD": {
+    "name": "",
+    "dp": 2
+  },
+  "LSL": {
+    "name": "",
+    "dp": 2
+  },
+  "LTL": {
+    "name": "",
+    "dp": 2
+  },
+  "LVL": {
+    "name": "",
+    "dp": 2
+  },
+  "LYD": {
+    "name": "",
+    "dp": 2
+  },
+  "MAD": {
+    "name": "",
+    "dp": 2
+  },
+  "MDL": {
+    "name": "",
+    "dp": 2
+  },
+  "MGA": {
+    "name": "",
+    "dp": 2
+  },
+  "MKD": {
+    "name": "",
+    "dp": 2
+  },
+  "MMK": {
+    "name": "",
+    "dp": 2
+  },
+  "MNT": {
+    "name": "",
+    "dp": 2
+  },
+  "MOP": {
+    "name": "",
+    "dp": 2
+  },
+  "MRO": {
+    "name": "",
+    "dp": 2
+  },
+  "MUR": {
+    "name": "",
+    "dp": 2
+  },
+  "MVR": {
+    "name": "",
+    "dp": 2
+  },
+  "MWK": {
+    "name": "",
+    "dp": 2
+  },
+  "MXN": {
+    "name": "",
+    "dp": 2
+  },
+  "MYR": {
+    "name": "",
+    "dp": 2
+  },
+  "MZN": {
+    "name": "",
+    "dp": 2
+  },
+  "NAD": {
+    "name": "",
+    "dp": 2
+  },
+  "NGN": {
+    "name": "",
+    "dp": 2
+  },
+  "NIO": {
+    "name": "",
+    "dp": 2
+  },
+  "NOK": {
+    "name": "",
+    "dp": 2
+  },
+  "NPR": {
+    "name": "",
+    "dp": 2
+  },
+  "NZD": {
+    "name": "",
+    "dp": 2
+  },
+  "OMR": {
+    "name": "",
+    "dp": 2
+  },
+  "PAB": {
+    "name": "",
+    "dp": 2
+  },
+  "PEN": {
+    "name": "",
+    "dp": 2
+  },
+  "PGK": {
+    "name": "",
+    "dp": 2
+  },
+  "PHP": {
+    "name": "",
+    "dp": 2
+  },
+  "PKR": {
+    "name": "",
+    "dp": 2
+  },
+  "PLN": {
+    "name": "",
+    "dp": 2
+  },
+  "PYG": {
+    "name": "",
+    "dp": 2
+  },
+  "QAR": {
+    "name": "",
+    "dp": 2
+  },
+  "RMB": {
+    "name": "",
+    "dp": 2
+  },
+  "RON": {
+    "name": "",
+    "dp": 2
+  },
+  "RSD": {
+    "name": "",
+    "dp": 2
+  },
+  "RUB": {
+    "name": "",
+    "dp": 2
+  },
+  "RWF": {
+    "name": "",
+    "dp": 2
+  },
+  "SAR": {
+    "name": "",
+    "dp": 2
+  },
+  "SBD": {
+    "name": "",
+    "dp": 2
+  },
+  "SCR": {
+    "name": "",
+    "dp": 2
+  },
+  "SDG": {
+    "name": "",
+    "dp": 2
+  },
+  "SEK": {
+    "name": "",
+    "dp": 2
+  },
+  "SGD": {
+    "name": "",
+    "dp": 2
+  },
+  "SHP": {
+    "name": "",
+    "dp": 2
+  },
+  "SLL": {
+    "name": "",
+    "dp": 2
+  },
+  "SOS": {
+    "name": "",
+    "dp": 2
+  },
+  "SRD": {
+    "name": "",
+    "dp": 2
+  },
+  "SSP": {
+    "name": "",
+    "dp": 2
+  },
+  "STD": {
+    "name": "",
+    "dp": 2
+  },
+  "STN": {
+    "name": "",
+    "dp": 2
+  },
+  "SVC": {
+    "name": "",
+    "dp": 2
+  },
+  "SYP": {
+    "name": "",
+    "dp": 2
+  },
+  "SZL": {
+    "name": "",
+    "dp": 2
+  },
+  "THB": {
+    "name": "",
+    "dp": 2
+  },
+  "TJS": {
+    "name": "",
+    "dp": 2
+  },
+  "TMT": {
+    "name": "",
+    "dp": 2
+  },
+  "TND": {
+    "name": "",
+    "dp": 2
+  },
+  "TOP": {
+    "name": "",
+    "dp": 2
+  },
+  "TRY": {
+    "name": "",
+    "dp": 2
+  },
+  "TTD": {
+    "name": "",
+    "dp": 2
+  },
+  "TWD": {
+    "name": "",
+    "dp": 2
+  },
+  "TZS": {
+    "name": "",
+    "dp": 2
+  },
+  "UAH": {
+    "name": "",
+    "dp": 2
+  },
+  "UGX": {
+    "name": "",
+    "dp": 2
+  },
+  "USD": {
+    "name": "",
+    "dp": 2
+  },
+  "UYU": {
+    "name": "",
+    "dp": 2
+  },
+  "UZS": {
+    "name": "",
+    "dp": 2
+  },
+  "VEF": {
+    "name": "",
+    "dp": 2
+  },
+  "VND": {
+    "name": "",
+    "dp": 2
+  },
+  "VUV": {
+    "name": "",
+    "dp": 2
+  },
+  "WST": {
+    "name": "",
+    "dp": 2
+  },
+  "XAF": {
+    "name": "",
+    "dp": 2
+  },
+  "XAG": {
+    "name": "",
+    "dp": 2
+  },
+  "XAU": {
+    "name": "",
+    "dp": 2
+  },
+  "XCD": {
+    "name": "",
+    "dp": 2
+  },
+  "XDR": {
+    "name": "",
+    "dp": 2
+  },
+  "XOF": {
+    "name": "",
+    "dp": 2
+  },
+  "XPD": {
+    "name": "",
+    "dp": 2
+  },
+  "XPF": {
+    "name": "",
+    "dp": 2
+  },
+  "XPT": {
+    "name": "",
+    "dp": 2
+  },
+  "YER": {
+    "name": "",
+    "dp": 2
+  },
+  "ZAR": {
+    "name": "",
+    "dp": 2
+  },
+  "ZMK": {
+    "name": "",
+    "dp": 2
+  },
+  "ZMW": {
+    "name": "",
+    "dp": 2
+  },
+  "ZWL": {
+    "name": "",
+    "dp": 2
+  }
+}
