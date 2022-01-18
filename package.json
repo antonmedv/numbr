@@ -2,7 +2,7 @@
   "name": "@medv/numbr",
   "version": "1.0.0",
   "description": "A smart calculator",
-  "main": "src/index.ts",
+  "main": "index.js",
   "scripts": {
     "test": "ava"
   },
