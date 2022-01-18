@@ -1,398 +1,398 @@
 {
   "AAVE": {
-    "name": "",
-    "dp": 2
+    "name": "Aave",
+    "dp": 8
   },
   "ADA": {
-    "name": "",
-    "dp": 2
+    "name": "Cardano",
+    "dp": 8
   },
   "ALGO": {
-    "name": "",
-    "dp": 2
+    "name": "Algorand",
+    "dp": 8
   },
   "ALINK": {
-    "name": "",
-    "dp": 2
+    "name": "ALINK",
+    "dp": 8
   },
   "ALPHA": {
-    "name": "",
-    "dp": 2
+    "name": "ALPHA",
+    "dp": 8
   },
   "AMPL": {
-    "name": "",
-    "dp": 2
+    "name": "AMPL",
+    "dp": 8
   },
   "ATOM": {
-    "name": "",
-    "dp": 2
+    "name": "Cosmos",
+    "dp": 8
   },
   "AVAX": {
-    "name": "",
-    "dp": 2
+    "name": "Avalanche",
+    "dp": 8
   },
   "BAL": {
-    "name": "",
-    "dp": 2
+    "name": "BAL",
+    "dp": 8
   },
   "BAND": {
-    "name": "",
-    "dp": 2
+    "name": "BAND",
+    "dp": 8
   },
   "BAT": {
-    "name": "",
-    "dp": 2
+    "name": "BAT",
+    "dp": 8
   },
   "BCH": {
-    "name": "",
-    "dp": 2
+    "name": "Bitcoin Cash",
+    "dp": 8
   },
   "BNB": {
-    "name": "",
-    "dp": 2
+    "name": "Binance Coin",
+    "dp": 8
   },
   "BSV": {
-    "name": "",
-    "dp": 2
+    "name": "BSV",
+    "dp": 8
   },
   "BTC": {
-    "name": "",
-    "dp": 2
+    "name": "Bitcoin",
+    "dp": 8
   },
   "BTT": {
-    "name": "",
-    "dp": 2
+    "name": "BTT",
+    "dp": 8
   },
   "BUSD": {
-    "name": "",
-    "dp": 2
+    "name": "Binance USD",
+    "dp": 8
   },
   "CDAI": {
-    "name": "",
-    "dp": 2
+    "name": "Compound Dai",
+    "dp": 8
   },
   "CEL": {
-    "name": "",
-    "dp": 2
+    "name": "CEL",
+    "dp": 8
   },
   "CELO": {
-    "name": "",
-    "dp": 2
+    "name": "CELO",
+    "dp": 8
   },
   "CETH": {
-    "name": "",
-    "dp": 2
+    "name": "Compound Ether",
+    "dp": 8
   },
   "CHSB": {
-    "name": "",
-    "dp": 2
+    "name": "CHSB",
+    "dp": 8
   },
   "COMP": {
-    "name": "",
-    "dp": 2
+    "name": "COMP",
+    "dp": 8
   },
   "CRO": {
-    "name": "",
-    "dp": 2
+    "name": "Crypto.com Chain",
+    "dp": 8
   },
   "CRV": {
-    "name": "",
-    "dp": 2
+    "name": "CRV",
+    "dp": 8
   },
   "CUSDC": {
-    "name": "",
-    "dp": 2
+    "name": "CUSDC",
+    "dp": 8
   },
   "DAI": {
-    "name": "",
-    "dp": 2
+    "name": "Dai",
+    "dp": 8
   },
   "DASH": {
-    "name": "",
-    "dp": 2
+    "name": "DASH",
+    "dp": 8
   },
   "DCR": {
-    "name": "",
-    "dp": 2
+    "name": "DCR",
+    "dp": 8
   },
   "DGB": {
-    "name": "",
-    "dp": 2
+    "name": "DGB",
+    "dp": 8
   },
   "DOGE": {
-    "name": "",
-    "dp": 2
+    "name": "Dogecoin",
+    "dp": 8
   },
   "DOT": {
-    "name": "",
-    "dp": 2
+    "name": "Polkadot",
+    "dp": 8
   },
   "EGLD": {
-    "name": "",
-    "dp": 2
+    "name": "Elrond",
+    "dp": 8
   },
   "ENJ": {
-    "name": "",
-    "dp": 2
+    "name": "ENJ",
+    "dp": 8
   },
   "EOS": {
-    "name": "",
-    "dp": 2
+    "name": "EOS",
+    "dp": 8
   },
   "ETC": {
-    "name": "",
-    "dp": 2
+    "name": "Ethereum Classic",
+    "dp": 8
   },
   "ETH": {
-    "name": "",
-    "dp": 2
+    "name": "Ethereum",
+    "dp": 8
   },
   "FIL": {
-    "name": "",
-    "dp": 2
+    "name": "FIL",
+    "dp": 8
   },
   "FTM": {
-    "name": "",
-    "dp": 2
+    "name": "Fantom",
+    "dp": 8
   },
   "FTT": {
-    "name": "",
-    "dp": 2
+    "name": "FTX Token",
+    "dp": 8
   },
   "GRT": {
-    "name": "",
-    "dp": 2
+    "name": "GRT",
+    "dp": 8
   },
   "HBAR": {
-    "name": "",
-    "dp": 2
+    "name": "Hedera HashGraph",
+    "dp": 8
   },
   "HBTC": {
-    "name": "",
-    "dp": 2
+    "name": "HBTC",
+    "dp": 8
   },
   "HT": {
-    "name": "",
-    "dp": 2
+    "name": "HT",
+    "dp": 8
   },
   "HUSD": {
-    "name": "",
-    "dp": 2
+    "name": "HUSD",
+    "dp": 8
   },
   "ICX": {
-    "name": "",
-    "dp": 2
+    "name": "ICX",
+    "dp": 8
   },
   "IOST": {
-    "name": "",
-    "dp": 2
+    "name": "IOST",
+    "dp": 8
   },
   "KNC": {
-    "name": "",
-    "dp": 2
+    "name": "KNC",
+    "dp": 8
   },
   "KSM": {
-    "name": "",
-    "dp": 2
+    "name": "KSM",
+    "dp": 8
   },
   "LEO": {
-    "name": "",
-    "dp": 2
+    "name": "LEO",
+    "dp": 8
   },
   "LINK": {
-    "name": "",
-    "dp": 2
+    "name": "Chainlink",
+    "dp": 8
   },
   "LRC": {
-    "name": "",
-    "dp": 2
+    "name": "LRC",
+    "dp": 8
   },
   "LTC": {
-    "name": "",
-    "dp": 2
+    "name": "Litecoin",
+    "dp": 8
   },
   "LUNA": {
-    "name": "",
-    "dp": 2
+    "name": "Terra",
+    "dp": 8
   },
   "MDX": {
-    "name": "",
-    "dp": 2
+    "name": "MDX",
+    "dp": 8
   },
   "MIOTA": {
-    "name": "",
-    "dp": 2
+    "name": "MIOTA",
+    "dp": 8
   },
   "MKR": {
-    "name": "",
-    "dp": 2
+    "name": "MKR",
+    "dp": 8
   },
   "NANO": {
-    "name": "",
-    "dp": 2
+    "name": "NANO",
+    "dp": 8
   },
   "NEO": {
-    "name": "",
-    "dp": 2
+    "name": "NEO",
+    "dp": 8
   },
   "NEXO": {
-    "name": "",
-    "dp": 2
+    "name": "NEXO",
+    "dp": 8
   },
   "NXM": {
-    "name": "",
-    "dp": 2
+    "name": "NXM",
+    "dp": 8
   },
   "OKB": {
-    "name": "",
-    "dp": 2
+    "name": "OKB",
+    "dp": 8
   },
   "OMG": {
-    "name": "",
-    "dp": 2
+    "name": "OMG",
+    "dp": 8
   },
   "ONT": {
-    "name": "",
-    "dp": 2
+    "name": "ONT",
+    "dp": 8
   },
   "PAX": {
-    "name": "",
-    "dp": 2
+    "name": "PAX",
+    "dp": 8
   },
   "QNT": {
-    "name": "",
-    "dp": 2
+    "name": "QNT",
+    "dp": 8
   },
   "QTUM": {
-    "name": "",
-    "dp": 2
+    "name": "QTUM",
+    "dp": 8
   },
   "REN": {
-    "name": "",
-    "dp": 2
+    "name": "REN",
+    "dp": 8
   },
   "RENBTC": {
-    "name": "",
-    "dp": 2
+    "name": "RENBTC",
+    "dp": 8
   },
   "RSR": {
-    "name": "",
-    "dp": 2
+    "name": "RSR",
+    "dp": 8
   },
   "RUNE": {
-    "name": "",
-    "dp": 2
+    "name": "RUNE",
+    "dp": 8
   },
   "SC": {
-    "name": "",
-    "dp": 2
+    "name": "SC",
+    "dp": 8
   },
   "SNX": {
-    "name": "",
-    "dp": 2
+    "name": "SNX",
+    "dp": 8
   },
   "SOL": {
-    "name": "",
-    "dp": 2
+    "name": "Solana",
+    "dp": 8
   },
   "STX": {
-    "name": "",
-    "dp": 2
+    "name": "STX",
+    "dp": 8
   },
   "SUSHI": {
-    "name": "",
-    "dp": 2
+    "name": "SUSHI",
+    "dp": 8
   },
   "THETA": {
-    "name": "",
-    "dp": 2
+    "name": "Theta Token",
+    "dp": 8
   },
   "TRX": {
-    "name": "",
-    "dp": 2
+    "name": "TRON",
+    "dp": 8
   },
   "TUSD": {
-    "name": "",
-    "dp": 2
+    "name": "TUSD",
+    "dp": 8
   },
   "UMA": {
-    "name": "",
-    "dp": 2
+    "name": "UMA",
+    "dp": 8
   },
   "UNI": {
-    "name": "",
-    "dp": 2
+    "name": "Uniswap",
+    "dp": 8
   },
   "USDC": {
-    "name": "",
-    "dp": 2
+    "name": "USDC",
+    "dp": 8
   },
   "USDT": {
-    "name": "",
-    "dp": 2
+    "name": "Tether USD",
+    "dp": 8
   },
   "UST": {
-    "name": "",
-    "dp": 2
+    "name": "UST",
+    "dp": 8
   },
   "VET": {
-    "name": "",
-    "dp": 2
+    "name": "VeChain",
+    "dp": 8
   },
   "VGX": {
-    "name": "",
-    "dp": 2
+    "name": "VGX",
+    "dp": 8
   },
   "WAVES": {
-    "name": "",
-    "dp": 2
+    "name": "WAVES",
+    "dp": 8
   },
   "WBTC": {
-    "name": "",
-    "dp": 2
+    "name": "Wrapped BTC",
+    "dp": 8
   },
   "XEM": {
-    "name": "",
-    "dp": 2
+    "name": "XEM",
+    "dp": 8
   },
   "XLM": {
-    "name": "",
-    "dp": 2
+    "name": "Stellar",
+    "dp": 8
   },
   "XMR": {
-    "name": "",
-    "dp": 2
+    "name": "Monero",
+    "dp": 8
   },
   "XRP": {
-    "name": "",
-    "dp": 2
+    "name": "XRP",
+    "dp": 8
   },
   "XTZ": {
-    "name": "",
-    "dp": 2
+    "name": "Tezos",
+    "dp": 8
   },
   "XVG": {
-    "name": "",
-    "dp": 2
+    "name": "XVG",
+    "dp": 8
   },
   "YFI": {
-    "name": "",
-    "dp": 2
+    "name": "YFI",
+    "dp": 8
   },
   "ZEC": {
-    "name": "",
-    "dp": 2
+    "name": "ZEC",
+    "dp": 8
   },
   "ZEN": {
-    "name": "",
-    "dp": 2
+    "name": "ZEN",
+    "dp": 8
   },
   "ZIL": {
-    "name": "",
-    "dp": 2
+    "name": "ZIL",
+    "dp": 8
   },
   "ZRX": {
-    "name": "",
-    "dp": 2
+    "name": "ZRX",
+    "dp": 8
   }
 }
