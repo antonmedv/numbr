@@ -1,5 +1,5 @@
 import {
-  allCurrencies,
+  currenciesList,
   currencySignsToCode,
   findCurrencyCodeByWord
 } from '../currencies'
@@ -204,7 +204,7 @@ function toCurrency(token: Token | undefined): Currency | undefined {
     return new Currency(token)
   }
 
-  if (allCurrencies.has(s)) {
+  if (currenciesList.has(s)) {
     return new Currency(token)
   }
 }

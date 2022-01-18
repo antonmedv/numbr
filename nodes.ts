@@ -1,5 +1,5 @@
 import {
-  allCurrencies,
+  currenciesList,
   CurrencyRates,
   currencySignsToCode,
   findCurrencyCodeByWord
@@ -54,7 +54,7 @@ export class Currency implements Node {
       return code
     }
 
-    if (allCurrencies.has(upperValue)) {
+    if (currenciesList.has(upperValue)) {
       return upperValue
     }
     return undefined

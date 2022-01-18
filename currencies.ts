@@ -33,15 +33,10 @@ export function findCurrencyCodeByWord(word: string): string | undefined {
   return undefined
 }
 
-export let allCurrencies = new Set(
-  require('./currencies/currencies.json').concat(
-    require('./currencies/crypto.json'))
-)
-
-export function updateAllCurrencies(keys: string[]) {
-  allCurrencies = new Set(keys)
+export const currencies = require('./currencies.json')
+export const cryptoCurrencies = require('./crypto.json')
+export let currenciesList = new Set(Object.keys(currencies).concat(cryptoCurrencies))
+export function updateCurrenciesList(keys: string[]) {
+  currenciesList = new Set(keys)
 }
-
-export const otherCurrencies = new Set(require('./currencies/crypto.json'))
-
 
