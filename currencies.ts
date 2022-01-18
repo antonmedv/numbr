@@ -32,7 +32,7 @@ currencySignsToCode.set('₣', 'FRF' as CurrencyCode)
 currencySignsToCode.set('₩', 'KRW' as CurrencyCode)
 export const currencySigns = new Set(currencySignsToCode.keys())
 
-export const currencyWordsToCode: [RegExp, CurrencyCode][] = [
+const currencyWordsToCode: [RegExp, CurrencyCode][] = [
   [/^dollars?$/i, 'USD' as CurrencyCode],
   [/^ro?ubl(es?)?$/i, 'RUB' as CurrencyCode],
   [/^euros?$/i, 'EUR' as CurrencyCode],
@@ -45,7 +45,7 @@ export const currencyWordsToCode: [RegExp, CurrencyCode][] = [
   [/^битко[йи]н(ы|ами?|ов|ах)?$/i, 'BTC' as CurrencyCode],
 ]
 
-export function findCurrencyCodeByWord(word: string): CurrencyCode | undefined {
+function findCurrencyCodeByWord(word: string): CurrencyCode | undefined {
   for (let [r, code] of currencyWordsToCode) {
     if (r.test(word)) return code
   }
@@ -64,10 +64,6 @@ export function findCurrencyCode(word: string): CurrencyCode | undefined {
   return undefined
 }
 
-export function findCurrencyInfo(id: string): CurrencyInfo {
-  id = id.toUpperCase()
-  return currencies[id] || cryptoCurrencies[id] || {
-    name: id,
-    dp: 2,
-  }
+export function findCurrencyInfo(code: CurrencyCode): CurrencyInfo | undefined {
+  return currencies[code] || cryptoCurrencies[code] || undefined
 }

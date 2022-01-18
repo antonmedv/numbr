@@ -1,19 +1,13 @@
 import {
-  currenciesList, CurrencyCode,
+  CurrencyCode,
   CurrencyRates,
-  currencySignsToCode, findCurrencyCode,
-  findCurrencyCodeByWord, findCurrencyInfo
+  findCurrencyCode,
+  findCurrencyInfo
 } from './currencies'
 import {Markup} from './markup'
 import {Token} from './parser/lex'
 import {tokenToVariableName} from './parser/variables'
-import {
-  Header,
-  Nothing,
-  Numbr,
-  Percent,
-  Result
-} from './results'
+import {Header, Nothing, Numbr, Percent, Result} from './results'
 
 export type Context = {
   rates: CurrencyRates
@@ -46,8 +40,13 @@ export class Currency implements Node {
   }
 
   highlight() {
+    let name: string | undefined
+    let code = this.toCurrencyCode()
+    if (code) {
+      name = findCurrencyInfo(code)?.name
+    }
     let markup: Markup = []
-    markup.push([this.token.start, this.token.end, 'currency', findCurrencyInfo(this.token.value).name])
+    markup.push([this.token.start, this.token.end, 'currency', name])
     return markup
   }
 

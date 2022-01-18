@@ -1,8 +1,4 @@
-import {
-  currenciesList,
-  currencySignsToCode,
-  findCurrencyCodeByWord
-} from '../currencies'
+import {findCurrencyCode} from '../currencies'
 import {
   Assignment,
   Binary,
@@ -192,21 +188,11 @@ function toCurrency(token: Token | undefined): Currency | undefined {
   if (token == undefined) {
     return undefined
   }
-  let s = token.value.toUpperCase()
-
-  let code = currencySignsToCode.get(s)
+  let code = findCurrencyCode(token.value)
   if (code) {
     return new Currency(token)
   }
-
-  code = findCurrencyCodeByWord(s)
-  if (code) {
-    return new Currency(token)
-  }
-
-  if (currenciesList.has(s)) {
-    return new Currency(token)
-  }
+  return undefined
 }
 
 function number(p: Parser): Node {
