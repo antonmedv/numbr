@@ -9,7 +9,7 @@ export type Tag = 'number'
 export type Markup = [number, number, Tag, string?][]
 
 export function mergeMarkup(markup: Markup | undefined) {
-  let map = new Map<number, [number, string, string?][]>()
+  let map = new Map<number, [number, Tag, string?][]>()
   if (markup == undefined) {
     return map
   }

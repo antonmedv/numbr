@@ -1,8 +1,8 @@
 import {
-  currenciesList,
+  currenciesList, CurrencyCode,
   CurrencyRates,
-  currencySignsToCode,
-  findCurrencyCodeByWord
+  currencySignsToCode, findCurrencyCode,
+  findCurrencyCodeByWord, findCurrencyInfo
 } from './currencies'
 import {Markup} from './markup'
 import {Token} from './parser/lex'
@@ -41,28 +41,13 @@ export class Currency implements Node {
     return new Nothing()
   }
 
-  toCurrencyCode(): string | undefined {
-    let upperValue = this.token.value.toUpperCase()
-
-    let code = currencySignsToCode.get(upperValue)
-    if (code) {
-      return code
-    }
-
-    code = findCurrencyCodeByWord(upperValue)
-    if (code) {
-      return code
-    }
-
-    if (currenciesList.has(upperValue)) {
-      return upperValue
-    }
-    return undefined
+  toCurrencyCode(): CurrencyCode | undefined {
+    return findCurrencyCode(this.token.value)
   }
 
   highlight() {
     let markup: Markup = []
-    markup.push([this.token.start, this.token.end, 'currency'])
+    markup.push([this.token.start, this.token.end, 'currency', findCurrencyInfo(this.token.value).name])
     return markup
   }
 
@@ -106,7 +91,7 @@ export class Value implements Node {
     s = s.replace(/[\s,]/g, '')
       .replace(/k$/, '')
       .replace(/M$/, '')
-    return new Numbr(Number(s) * multiplier, this.currency?.toString())
+    return new Numbr(Number(s) * multiplier, this.currency?.toCurrencyCode())
   }
 
   highlight() {
@@ -221,7 +206,7 @@ export class Unary implements Node {
 }
 
 function apply(
-  Kind: new (value: number, currency?: string) => Result,
+  Kind: new (value: number, currency?: CurrencyCode) => Result,
   op: (x: number, y: number) => number,
   a: Numbr,
   b: Numbr,
@@ -467,7 +452,6 @@ export class Fraction implements Node {
     return `(${this.left.toString()} ${this.op.value} ${this.right.toString()})`
   }
 }
-
 
 export class Assignment implements Node {
   kind: 'assignment' = 'assignment'

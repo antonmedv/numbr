@@ -1,3 +1,5 @@
+import {CurrencyCode} from './currencies'
+
 export interface Result {
   valueOf(): number
 }
@@ -15,8 +17,11 @@ export class Numbr implements Result {
 
   constructor(
     public value: number,
-    public currency?: string,
+    public currency?: CurrencyCode,
   ) {
+    if (currency?.toUpperCase() != currency) {
+      throw new Error(`The currency ${currency} is in lowercase!`)
+    }
   }
 
   valueOf(): number {
