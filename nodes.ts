@@ -9,9 +9,7 @@ import {Token} from './parser/lex'
 import {tokenToVariableName} from './parser/variables'
 import {
   Header,
-  nothing,
   Nothing,
-  numbr,
   Numbr,
   Percent,
   Result
@@ -40,7 +38,7 @@ export class Currency implements Node {
   }
 
   evaluate(ctx: Context): Result {
-    return nothing()
+    return new Nothing()
   }
 
   toCurrencyCode(): string | undefined {
@@ -77,7 +75,7 @@ export class Nil implements Node {
   kind: 'nil' = 'nil'
 
   evaluate(ctx: Context): Result {
-    return nothing()
+    return new Nothing()
   }
 
   highlight() {
@@ -108,7 +106,7 @@ export class Value implements Node {
     s = s.replace(/[\s,]/g, '')
       .replace(/k$/, '')
       .replace(/M$/, '')
-    return numbr(Number(s) * multiplier, this.currency?.toString())
+    return new Numbr(Number(s) * multiplier, this.currency?.toString())
   }
 
   highlight() {
@@ -169,7 +167,7 @@ export class Sum implements Node {
       if (answers[i] instanceof Numbr) {
         sum = apply(Numbr, (x, y) => x + y, sum as Numbr, answers[i], rates)
       } else {
-        return nothing()
+        return new Nothing()
       }
     }
     return sum
@@ -236,7 +234,7 @@ function apply(
     return new Kind(op(a.value, b.value), b.currency)
   }
   if (rates[a.currency] == undefined || rates[b.currency] == undefined) {
-    return nothing()
+    return new Nothing()
   }
   return new Kind(op(a.value * rates[a.currency] / rates[b.currency], b.value), b.currency)
 }
@@ -272,7 +270,7 @@ export class Binary implements Node {
           return new Percent(a.value + b.value)
         }
         if (a instanceof Percent && b instanceof Numbr) {
-          return nothing()
+          return new Nothing()
         }
         break
 
@@ -285,7 +283,7 @@ export class Binary implements Node {
 
         }
         if (a instanceof Percent && b instanceof Numbr) {
-          return nothing()
+          return new Nothing()
         }
         if (a instanceof Percent && b instanceof Percent) {
           return new Percent(a.value - b.value)
@@ -318,7 +316,7 @@ export class Binary implements Node {
           return c
         }
         if (a instanceof Numbr && b instanceof Percent) {
-          return nothing()
+          return new Nothing()
         }
         if (a instanceof Percent && b instanceof Numbr) {
           return new Percent(a.value / b.value)
@@ -333,10 +331,10 @@ export class Binary implements Node {
           return apply(Numbr, (x, y) => x % y, a, b, rates)
         }
         if (a instanceof Numbr && b instanceof Percent) {
-          return nothing()
+          return new Nothing()
         }
         if (a instanceof Percent && b instanceof Numbr) {
-          return nothing()
+          return new Nothing()
         }
         if (a instanceof Percent && b instanceof Percent) {
           return new Percent(a.value % b.value)
@@ -348,17 +346,17 @@ export class Binary implements Node {
           return apply(Numbr, (x, y) => x ** y, a, b, rates)
         }
         if (a instanceof Numbr && b instanceof Percent) {
-          return nothing()
+          return new Nothing()
         }
         if (a instanceof Percent && b instanceof Numbr) {
-          return nothing()
+          return new Nothing()
         }
         if (a instanceof Percent && b instanceof Percent) {
           return new Percent(a.value ** b.value)
         }
         break
     }
-    return nothing()
+    return new Nothing()
   }
 
   highlight() {
@@ -414,7 +412,7 @@ export class Conversion implements Node {
       return new Percent(a.value)
     }
 
-    return nothing()
+    return new Nothing()
   }
 
   highlight() {
@@ -445,16 +443,16 @@ export class Fraction implements Node {
     let b = this.right.evaluate(ctx)
 
     if (a instanceof Numbr && b instanceof Numbr) {
-      return numbr(b.value * a.value / 100, b.currency)
+      return new Numbr(b.value * a.value / 100, b.currency)
     }
     if (a instanceof Percent && b instanceof Numbr) {
-      return numbr(b.value * a.value / 100, b.currency)
+      return new Numbr(b.value * a.value / 100, b.currency)
     }
     if (a instanceof Percent && b instanceof Percent) {
       return new Percent(b.value * a.value / 100)
     }
 
-    return nothing()
+    return new Nothing()
   }
 
   highlight() {
@@ -511,7 +509,7 @@ export class Variable implements Node {
   evaluate(ctx: Context): Result {
     let result = globalThis[tokenToVariableName(this.token)]
     if (Number.isFinite(result)) {
-      return numbr(result)
+      return new Numbr(result)
     }
     return result
   }
@@ -536,7 +534,7 @@ export class Reference implements Node {
   }
 
   evaluate(ctx: Context): Result {
-    return nothing()
+    return new Nothing()
   }
 
   highlight() {

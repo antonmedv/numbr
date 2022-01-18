@@ -10,10 +10,6 @@ export class Nothing implements Result {
   }
 }
 
-export function nothing() {
-  return new Nothing()
-}
-
 export class Numbr implements Result {
   kind: 'numbr' = 'numbr'
 
@@ -30,10 +26,6 @@ export class Numbr implements Result {
   get hasCurrency(): boolean {
     return this.currency != undefined
   }
-}
-
-export function numbr(value: number, currency?: string) {
-  return new Numbr(value, currency)
 }
 
 export class Percent implements Result {
