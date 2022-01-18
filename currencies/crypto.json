@@ -1,101 +1,398 @@
-[
-  "AAVE",
-  "ADA",
-  "ALGO",
-  "ALINK",
-  "ALPHA",
-  "AMPL",
-  "ATOM",
-  "AVAX",
-  "BAL",
-  "BAND",
-  "BAT",
-  "BCH",
-  "BNB",
-  "BSV",
-  "BTC",
-  "BTT",
-  "BUSD",
-  "CDAI",
-  "CEL",
-  "CELO",
-  "CETH",
-  "CHSB",
-  "COMP",
-  "CRO",
-  "CRV",
-  "CUSDC",
-  "DAI",
-  "DASH",
-  "DCR",
-  "DGB",
-  "DOGE",
-  "DOT",
-  "EGLD",
-  "ENJ",
-  "EOS",
-  "ETC",
-  "ETH",
-  "FIL",
-  "FTM",
-  "FTT",
-  "GRT",
-  "HBAR",
-  "HBTC",
-  "HT",
-  "HUSD",
-  "ICX",
-  "IOST",
-  "KNC",
-  "KSM",
-  "LEO",
-  "LINK",
-  "LRC",
-  "LTC",
-  "LUNA",
-  "MDX",
-  "MIOTA",
-  "MKR",
-  "NANO",
-  "NEO",
-  "NEXO",
-  "NXM",
-  "OKB",
-  "OMG",
-  "ONT",
-  "PAX",
-  "QNT",
-  "QTUM",
-  "REN",
-  "RENBTC",
-  "RSR",
-  "RUNE",
-  "SC",
-  "SNX",
-  "SOL",
-  "STX",
-  "SUSHI",
-  "THETA",
-  "TRX",
-  "TUSD",
-  "UMA",
-  "UNI",
-  "USDC",
-  "USDT",
-  "UST",
-  "VET",
-  "VGX",
-  "WAVES",
-  "WBTC",
-  "XEM",
-  "XLM",
-  "XMR",
-  "XRP",
-  "XTZ",
-  "XVG",
-  "YFI",
-  "ZEC",
-  "ZEN",
-  "ZIL",
-  "ZRX"
-]
+{
+  "AAVE": {
+    "name": "",
+    "dp": 2
+  },
+  "ADA": {
+    "name": "",
+    "dp": 2
+  },
+  "ALGO": {
+    "name": "",
+    "dp": 2
+  },
+  "ALINK": {
+    "name": "",
+    "dp": 2
+  },
+  "ALPHA": {
+    "name": "",
+    "dp": 2
+  },
+  "AMPL": {
+    "name": "",
+    "dp": 2
+  },
+  "ATOM": {
+    "name": "",
+    "dp": 2
+  },
+  "AVAX": {
+    "name": "",
+    "dp": 2
+  },
+  "BAL": {
+    "name": "",
+    "dp": 2
+  },
+  "BAND": {
+    "name": "",
+    "dp": 2
+  },
+  "BAT": {
+    "name": "",
+    "dp": 2
+  },
+  "BCH": {
+    "name": "",
+    "dp": 2
+  },
+  "BNB": {
+    "name": "",
+    "dp": 2
+  },
+  "BSV": {
+    "name": "",
+    "dp": 2
+  },
+  "BTC": {
+    "name": "",
+    "dp": 2
+  },
+  "BTT": {
+    "name": "",
+    "dp": 2
+  },
+  "BUSD": {
+    "name": "",
+    "dp": 2
+  },
+  "CDAI": {
+    "name": "",
+    "dp": 2
+  },
+  "CEL": {
+    "name": "",
+    "dp": 2
+  },
+  "CELO": {
+    "name": "",
+    "dp": 2
+  },
+  "CETH": {
+    "name": "",
+    "dp": 2
+  },
+  "CHSB": {
+    "name": "",
+    "dp": 2
+  },
+  "COMP": {
+    "name": "",
+    "dp": 2
+  },
+  "CRO": {
+    "name": "",
+    "dp": 2
+  },
+  "CRV": {
+    "name": "",
+    "dp": 2
+  },
+  "CUSDC": {
+    "name": "",
+    "dp": 2
+  },
+  "DAI": {
+    "name": "",
+    "dp": 2
+  },
+  "DASH": {
+    "name": "",
+    "dp": 2
+  },
+  "DCR": {
+    "name": "",
+    "dp": 2
+  },
+  "DGB": {
+    "name": "",
+    "dp": 2
+  },
+  "DOGE": {
+    "name": "",
+    "dp": 2
+  },
+  "DOT": {
+    "name": "",
+    "dp": 2
+  },
+  "EGLD": {
+    "name": "",
+    "dp": 2
+  },
+  "ENJ": {
+    "name": "",
+    "dp": 2
+  },
+  "EOS": {
+    "name": "",
+    "dp": 2
+  },
+  "ETC": {
+    "name": "",
+    "dp": 2
+  },
+  "ETH": {
+    "name": "",
+    "dp": 2
+  },
+  "FIL": {
+    "name": "",
+    "dp": 2
+  },
+  "FTM": {
+    "name": "",
+    "dp": 2
+  },
+  "FTT": {
+    "name": "",
+    "dp": 2
+  },
+  "GRT": {
+    "name": "",
+    "dp": 2
+  },
+  "HBAR": {
+    "name": "",
+    "dp": 2
+  },
+  "HBTC": {
+    "name": "",
+    "dp": 2
+  },
+  "HT": {
+    "name": "",
+    "dp": 2
+  },
+  "HUSD": {
+    "name": "",
+    "dp": 2
+  },
+  "ICX": {
+    "name": "",
+    "dp": 2
+  },
+  "IOST": {
+    "name": "",
+    "dp": 2
+  },
+  "KNC": {
+    "name": "",
+    "dp": 2
+  },
+  "KSM": {
+    "name": "",
+    "dp": 2
+  },
+  "LEO": {
+    "name": "",
+    "dp": 2
+  },
+  "LINK": {
+    "name": "",
+    "dp": 2
+  },
+  "LRC": {
+    "name": "",
+    "dp": 2
+  },
+  "LTC": {
+    "name": "",
+    "dp": 2
+  },
+  "LUNA": {
+    "name": "",
+    "dp": 2
+  },
+  "MDX": {
+    "name": "",
+    "dp": 2
+  },
+  "MIOTA": {
+    "name": "",
+    "dp": 2
+  },
+  "MKR": {
+    "name": "",
+    "dp": 2
+  },
+  "NANO": {
+    "name": "",
+    "dp": 2
+  },
+  "NEO": {
+    "name": "",
+    "dp": 2
+  },
+  "NEXO": {
+    "name": "",
+    "dp": 2
+  },
+  "NXM": {
+    "name": "",
+    "dp": 2
+  },
+  "OKB": {
+    "name": "",
+    "dp": 2
+  },
+  "OMG": {
+    "name": "",
+    "dp": 2
+  },
+  "ONT": {
+    "name": "",
+    "dp": 2
+  },
+  "PAX": {
+    "name": "",
+    "dp": 2
+  },
+  "QNT": {
+    "name": "",
+    "dp": 2
+  },
+  "QTUM": {
+    "name": "",
+    "dp": 2
+  },
+  "REN": {
+    "name": "",
+    "dp": 2
+  },
+  "RENBTC": {
+    "name": "",
+    "dp": 2
+  },
+  "RSR": {
+    "name": "",
+    "dp": 2
+  },
+  "RUNE": {
+    "name": "",
+    "dp": 2
+  },
+  "SC": {
+    "name": "",
+    "dp": 2
+  },
+  "SNX": {
+    "name": "",
+    "dp": 2
+  },
+  "SOL": {
+    "name": "",
+    "dp": 2
+  },
+  "STX": {
+    "name": "",
+    "dp": 2
+  },
+  "SUSHI": {
+    "name": "",
+    "dp": 2
+  },
+  "THETA": {
+    "name": "",
+    "dp": 2
+  },
+  "TRX": {
+    "name": "",
+    "dp": 2
+  },
+  "TUSD": {
+    "name": "",
+    "dp": 2
+  },
+  "UMA": {
+    "name": "",
+    "dp": 2
+  },
+  "UNI": {
+    "name": "",
+    "dp": 2
+  },
+  "USDC": {
+    "name": "",
+    "dp": 2
+  },
+  "USDT": {
+    "name": "",
+    "dp": 2
+  },
+  "UST": {
+    "name": "",
+    "dp": 2
+  },
+  "VET": {
+    "name": "",
+    "dp": 2
+  },
+  "VGX": {
+    "name": "",
+    "dp": 2
+  },
+  "WAVES": {
+    "name": "",
+    "dp": 2
+  },
+  "WBTC": {
+    "name": "",
+    "dp": 2
+  },
+  "XEM": {
+    "name": "",
+    "dp": 2
+  },
+  "XLM": {
+    "name": "",
+    "dp": 2
+  },
+  "XMR": {
+    "name": "",
+    "dp": 2
+  },
+  "XRP": {
+    "name": "",
+    "dp": 2
+  },
+  "XTZ": {
+    "name": "",
+    "dp": 2
+  },
+  "XVG": {
+    "name": "",
+    "dp": 2
+  },
+  "YFI": {
+    "name": "",
+    "dp": 2
+  },
+  "ZEC": {
+    "name": "",
+    "dp": 2
+  },
+  "ZEN": {
+    "name": "",
+    "dp": 2
+  },
+  "ZIL": {
+    "name": "",
+    "dp": 2
+  },
+  "ZRX": {
+    "name": "",
+    "dp": 2
+  }
+}
