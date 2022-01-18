@@ -52,7 +52,7 @@ for (let [expr, r] of cases) {
 
 let nodes = Object.entries(Nodes)
 for (let [name, Node] of nodes) {
-  test(`node "${name}" have a "kind"`, t => {
+  test(`${name} has a kind`, t => {
     let node = new (Node as any)
     t.is(typeof node.kind, 'string')
   })
