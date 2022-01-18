@@ -37,7 +37,7 @@ export function lex(code: string, vars: Varname[] = []) {
     }
 
     let value = l.code.slice(s, e).join('')
-    if (/^\p{L}[ \p{L}\p{N}]*$/ui.test(value)) {
+    if (/^\p{L}[_ \p{L}\p{N}]*$/ui.test(value)) {
       l.tokens.push({kind: 'variable', value, start: s, end: e})
       l.start = l.end = e
     }

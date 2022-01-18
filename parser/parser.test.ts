@@ -196,6 +196,10 @@ let cases: [string, Node, Varname[]?][] = [
     new Assignment(op('='), v('Yearly price'), new Value(n('10k')))
   ],
   [
+    'soft_limit = 100M',
+    new Assignment(op('='), v('soft_limit'), new Value(n('100M')))
+  ],
+  [
     'a b + a b c',
     new Binary(op('+'),
       new Variable(v('a b')),
