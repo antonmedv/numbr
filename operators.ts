@@ -3,7 +3,7 @@ export const operators = {
   multiplication: new Set(['*', 'x', 'х', '/', '%']),
   into: new Set(['in', 'to', 'в']),
   of: new Set(['of', 'от']),
-  sum: new Set(['sum', 'total', 'всего', 'сумма']),
+  sum: new Set(['sum', 'total']),
 }
 
 export const allOperators: Set<string> = new Set()
