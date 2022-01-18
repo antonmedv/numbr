@@ -120,7 +120,7 @@
     "dp": 2
   },
   "CLF": {
-    "name": "Unidad de Fomento (funds code)",
+    "name": "Unidad de Fomento",
     "dp": 4
   },
   "CLP": {
@@ -276,7 +276,7 @@
     "dp": 2
   },
   "ISK": {
-    "name": "Icelandic króna (plural: krónur)",
+    "name": "Icelandic króna",
     "dp": 0
   },
   "JMD": {
@@ -313,7 +313,7 @@
   },
   "KRW": {
     "name": "South Korean won",
-    "dp": null
+    "dp": 2
   },
   "KWD": {
     "name": "Kuwaiti dinar",
@@ -369,7 +369,7 @@
   },
   "MGA": {
     "name": "Malagasy ariary",
-    "dp": null
+    "dp": 2
   },
   "MKD": {
     "name": "Macedonian denar",
@@ -512,7 +512,7 @@
     "dp": 2
   },
   "SEK": {
-    "name": "Swedish krona (plural: kronor)",
+    "name": "Swedish krona",
     "dp": 2
   },
   "SGD": {
@@ -636,12 +636,12 @@
     "dp": 0
   },
   "XAG": {
-    "name": "Silver (one troy ounce)",
-    "dp": null
+    "name": "Silver ounce",
+    "dp": 2
   },
   "XAU": {
-    "name": "Gold (one troy ounce)",
-    "dp": null
+    "name": "Gold ounce",
+    "dp": 2
   },
   "XCD": {
     "name": "East Caribbean dollar",
@@ -649,23 +649,23 @@
   },
   "XDR": {
     "name": "Special drawing rights",
-    "dp": null
+    "dp": 2
   },
   "XOF": {
     "name": "CFA franc BCEAO",
     "dp": 0
   },
   "XPD": {
-    "name": "Palladium (one troy ounce)",
-    "dp": null
+    "name": "Palladium ounce",
+    "dp": 2
   },
   "XPF": {
     "name": "CFP franc (franc Pacifique)",
     "dp": 0
   },
   "XPT": {
-    "name": "Platinum (one troy ounce)",
-    "dp": null
+    "name": "Platinum ounce",
+    "dp": 2
   },
   "YER": {
     "name": "Yemeni rial",
