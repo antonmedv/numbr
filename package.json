@@ -1,0 +1,34 @@
+{
+  "name": "@medv/numbr",
+  "version": "1.0.0",
+  "description": "A smart calculator",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": "antonmedv/numbr",
+  "keywords": [
+    "calculator"
+  ],
+  "author": "Anton Medvedev <anton@medv.io>",
+  "license": "MIT",
+  "homepage": "https://numbr.dev",
+  "devDependencies": {
+    "ava": "^4.0.1"
+  },
+  "ava": {
+    "files": [
+      "**/*.test.ts"
+    ],
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
+  },
+  "dependencies": {
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
+  }
+}
