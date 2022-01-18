@@ -1,11 +1,12 @@
-import {Token} from './parser/lex'
-import {tokenToVariableName} from './parser/variables'
 import {
   allCurrencies,
   CurrencyRates,
   currencySignsToCode,
   findCurrencyCodeByWord
 } from './currencies'
+import {Markup} from './markup'
+import {Token} from './parser/lex'
+import {tokenToVariableName} from './parser/variables'
 import {
   Header,
   nothing,
@@ -15,8 +16,6 @@ import {
   Percent,
   Result
 } from './results'
-
-export type Markup = [number, number, string, string?][]
 
 export type Context = {
   rates: CurrencyRates

@@ -1,4 +1,4 @@
-import {Markup} from './nodes'
+export type Markup = [number, number, string, string?][]
 
 export function mergeMarkup(markup: Markup | undefined) {
   let map = new Map<number, [number, string, string?][]>()
