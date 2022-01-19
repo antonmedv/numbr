@@ -120,8 +120,8 @@ let cases: [string, Node, Varname[]?][] = [
       new Percentage(p('25%'))),
   ],
   [
-    '1 % __2',
-    new Binary(op('%'), new Value(n(1)), new Variable(v('__2')))
+    '1 % ƒы2',
+    new Binary(op('%'), new Value(n(1)), new Variable(v('ƒы2')))
   ],
   [
     '1 ^ 2',

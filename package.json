@@ -28,6 +28,8 @@
     ]
   },
   "dependencies": {
+    "@types/big.js": "^6.1.2",
+    "big.js": "^6.1.1",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.4"
   }

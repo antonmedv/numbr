@@ -1,31 +1,22 @@
+import Big from 'big.js'
 import {CurrencyCode} from './currencies'
 
-export interface Result {
-  valueOf(): number
-}
+export interface Result {}
 
 export class Nothing implements Result {
   kind: 'nil' = 'nil'
-
-  valueOf(): number {
-    throw 'nope'
-  }
 }
 
 export class Numbr implements Result {
   kind: 'numbr' = 'numbr'
 
   constructor(
-    public value: number,
+    public value: Big,
     public currency?: CurrencyCode,
   ) {
     if (currency?.toUpperCase() != currency) {
       throw new Error(`The currency ${currency} is in lowercase!`)
     }
-  }
-
-  valueOf(): number {
-    return this.value
   }
 
   get hasCurrency(): boolean {
@@ -37,12 +28,8 @@ export class Percent implements Result {
   kind: 'percent' = 'percent'
 
   constructor(
-    public value: number,
+    public value: Big,
   ) {
-  }
-
-  valueOf(): number {
-    return this.value
   }
 }
 
@@ -52,9 +39,5 @@ export class Header implements Result {
   constructor(
     public title: string,
   ) {
-  }
-
-  valueOf(): number {
-    throw 'nope'
   }
 }

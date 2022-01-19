@@ -157,8 +157,8 @@ function root(l: Lexer) {
     return root
   }
 
-  if (ch == '_') {
-    if (l.accept(/_/)) {
+  if (ch == 'ƒ') {
+    if (l.accept(/ы/)) {
       scanNumber(l)
       l.emit('variable')
       return root

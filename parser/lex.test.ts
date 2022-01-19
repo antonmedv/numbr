@@ -33,9 +33,9 @@ let cases: [string, { kind: Kind, value: string }[], Varname[]?][] = [
     ]
   ],
   [
-    '__1',
+    'ƒы1',
     [
-      {kind: 'variable', value: '__1'},
+      {kind: 'variable', value: 'ƒы1'},
       {kind: 'eof', value: ''},
     ]
   ],

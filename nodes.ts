@@ -1,3 +1,5 @@
+import Big from 'big.js'
+import {apply} from './apply'
 import {
   CurrencyCode,
   CurrencyRates,
@@ -90,7 +92,7 @@ export class Value implements Node {
     s = s.replace(/[\s,]/g, '')
       .replace(/k$/, '')
       .replace(/M$/, '')
-    return new Numbr(Number(s) * multiplier, this.currency?.toCurrencyCode())
+    return new Numbr(Big(s).mul(multiplier), this.currency?.toCurrencyCode())
   }
 
   highlight() {
@@ -115,7 +117,7 @@ export class Percentage implements Node {
 
   evaluate(ctx: Context): Result {
     let s = this.value.value.substring(0, this.value.value.length - 1)
-    return new Percent(Number(s))
+    return new Percent(Big(s))
   }
 
   highlight() {
@@ -140,7 +142,7 @@ export class Sum implements Node {
 
   evaluate(ctx: Context): Result {
     let {rates, answers, line} = ctx
-    let sum: Result = new Numbr(0)
+    let sum = new Numbr(Big(0))
     for (let i = line - 1; i >= 0; i--) {
       if (answers[i] instanceof Header) {
         break
@@ -149,7 +151,7 @@ export class Sum implements Node {
         continue
       }
       if (answers[i] instanceof Numbr) {
-        sum = apply(Numbr, (x, y) => x + y, sum as Numbr, answers[i], rates)
+        sum = apply((x, y) => x.add(y), sum, answers[i], rates)
       } else {
         return new Nothing()
       }
@@ -182,10 +184,10 @@ export class Unary implements Node {
 
     if (this.op.value == '-') {
       if (v instanceof Numbr) {
-        return new Numbr(-v.value, v.currency)
+        return new Numbr(v.value.mul(-1), v.currency)
       }
       if (v instanceof Percent) {
-        return new Percent(-v.value)
+        return new Percent(v.value.mul(-1))
       }
     }
 
@@ -202,25 +204,6 @@ export class Unary implements Node {
   toString() {
     return `${this.op.value}(${this.node.toString()})`
   }
-}
-
-function apply(
-  Kind: new (value: number, currency?: CurrencyCode) => Result,
-  op: (x: number, y: number) => number,
-  a: Numbr,
-  b: Numbr,
-  rates: CurrencyRates
-): Result {
-  if (a.currency == undefined || b.currency == undefined) {
-    return new Kind(op(a.value, b.value), b.currency || a.currency)
-  }
-  if (a.currency == b.currency) {
-    return new Kind(op(a.value, b.value), b.currency)
-  }
-  if (rates[a.currency] == undefined || rates[b.currency] == undefined) {
-    return new Nothing()
-  }
-  return new Kind(op(a.value * rates[a.currency] / rates[b.currency], b.value), b.currency)
 }
 
 export class Binary implements Node {
@@ -245,13 +228,13 @@ export class Binary implements Node {
     switch (this.op.value) {
       case '+':
         if (a instanceof Numbr && b instanceof Numbr) {
-          return apply(Numbr, (x, y) => x + y, a, b, rates)
+          return apply((x, y) => x.add(y), a, b, rates)
         }
         if (a instanceof Numbr && b instanceof Percent) {
-          return new Numbr(a.value * (1 + b.value / 100), a.currency)
+          return new Numbr(a.value.mul(Big(1).add(b.value.div(100))), a.currency)
         }
         if (a instanceof Percent && b instanceof Percent) {
-          return new Percent(a.value + b.value)
+          return new Percent(a.value.add(b.value))
         }
         if (a instanceof Percent && b instanceof Numbr) {
           return new Nothing()
@@ -260,17 +243,17 @@ export class Binary implements Node {
 
       case '-':
         if (a instanceof Numbr && b instanceof Numbr) {
-          return apply(Numbr, (x, y) => x - y, a, b, rates)
+          return apply((x, y) => x.minus(y), a, b, rates)
         }
         if (a instanceof Numbr && b instanceof Percent) {
-          return new Numbr(a.value * (1 - b.value / 100), a.currency)
+          return new Numbr(a.value.mul(Big(1).minus(b.value.div(100))), a.currency)
 
         }
         if (a instanceof Percent && b instanceof Numbr) {
           return new Nothing()
         }
         if (a instanceof Percent && b instanceof Percent) {
-          return new Percent(a.value - b.value)
+          return new Percent(a.value.minus(b.value))
         }
         break
 
@@ -278,23 +261,23 @@ export class Binary implements Node {
       case 'x':
       case 'х':
         if (a instanceof Numbr && b instanceof Numbr) {
-          return apply(Numbr, (x, y) => x * y, a, b, rates)
+          return apply((x, y) => x.mul(y), a, b, rates)
         }
         if (a instanceof Numbr && b instanceof Percent) {
-          return new Numbr(a.value * b.value / 100, a.currency)
+          return new Numbr(a.value.mul(b.value).div(100), a.currency)
         }
         if (a instanceof Percent && b instanceof Numbr) {
-          return new Percent(a.value * b.value)
+          return new Percent(a.value.mul(b.value))
         }
         if (a instanceof Percent && b instanceof Percent) {
-          return new Percent(a.value * b.value)
+          return new Percent(a.value.mul(b.value))
         }
         break
 
       case '/':
         if (a instanceof Numbr && b instanceof Numbr) {
-          let c = apply(Numbr, (x, y) => x / y, a, b, rates)
-          if (a.hasCurrency && b.hasCurrency && c instanceof Numbr) {
+          let c = apply((x, y) => x.div(y), a, b, rates)
+          if (a.hasCurrency && b.hasCurrency) {
             c.currency = undefined
           }
           return c
@@ -303,16 +286,16 @@ export class Binary implements Node {
           return new Nothing()
         }
         if (a instanceof Percent && b instanceof Numbr) {
-          return new Percent(a.value / b.value)
+          return new Percent(a.value.div(b.value))
         }
         if (a instanceof Percent && b instanceof Percent) {
-          return new Percent(a.value / b.value)
+          return new Percent(a.value.div(b.value))
         }
         break
 
       case '%':
         if (a instanceof Numbr && b instanceof Numbr) {
-          return apply(Numbr, (x, y) => x % y, a, b, rates)
+          return apply((x, y) => x.mod(y), a, b, rates)
         }
         if (a instanceof Numbr && b instanceof Percent) {
           return new Nothing()
@@ -321,13 +304,13 @@ export class Binary implements Node {
           return new Nothing()
         }
         if (a instanceof Percent && b instanceof Percent) {
-          return new Percent(a.value % b.value)
+          return new Percent(a.value.mod(b.value))
         }
         break
 
       case '^':
         if (a instanceof Numbr && b instanceof Numbr) {
-          return apply(Numbr, (x, y) => x ** y, a, b, rates)
+          return apply((x, y) => x.pow(y.toNumber()), a, b, rates)
         }
         if (a instanceof Numbr && b instanceof Percent) {
           return new Nothing()
@@ -336,7 +319,7 @@ export class Binary implements Node {
           return new Nothing()
         }
         if (a instanceof Percent && b instanceof Percent) {
-          return new Percent(a.value ** b.value)
+          return new Percent(a.value.pow(b.value.toNumber()))
         }
         break
     }
@@ -389,7 +372,7 @@ export class Conversion implements Node {
       if (rates[a.currency] == undefined || rates[currencyCode] == undefined) {
         return a
       }
-      return new Numbr(a.value * rates[a.currency] / rates[currencyCode], currencyCode)
+      return new Numbr(a.value.mul(rates[a.currency]).div(rates[currencyCode]), currencyCode)
     }
 
     if (a instanceof Percent) {
@@ -427,13 +410,13 @@ export class Fraction implements Node {
     let b = this.right.evaluate(ctx)
 
     if (a instanceof Numbr && b instanceof Numbr) {
-      return new Numbr(b.value * a.value / 100, b.currency)
+      return new Numbr(b.value.mul(a.value).div(100), b.currency)
     }
     if (a instanceof Percent && b instanceof Numbr) {
-      return new Numbr(b.value * a.value / 100, b.currency)
+      return new Numbr(b.value.mul(a.value).div(100), b.currency)
     }
     if (a instanceof Percent && b instanceof Percent) {
-      return new Percent(b.value * a.value / 100)
+      return new Percent(b.value.mul(a.value).div(100))
     }
 
     return new Nothing()
