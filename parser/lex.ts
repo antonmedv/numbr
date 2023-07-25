@@ -157,6 +157,11 @@ function root(l: Lexer) {
     return root
   }
 
+  if ('×'.includes(ch)) {
+    l.emit('operator')
+    return root
+  }
+
   if (ch == 'ƒ') {
     if (l.accept(/ы/)) {
       scanNumber(l)

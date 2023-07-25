@@ -186,6 +186,10 @@ let cases: [string, Node, Varname[]?][] = [
       new Value(n('10')))
   ],
   [
+    '2×2',
+    new Binary(op('×'), new Value(n(2)), new Value(n(2)))
+  ],
+  [
     'var = 1',
     new Assignment(op('='),
       v('var'),
