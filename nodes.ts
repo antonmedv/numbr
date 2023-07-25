@@ -260,6 +260,7 @@ export class Binary implements Node {
       case '*':
       case 'x':
       case 'х':
+      case '×':
         if (a instanceof Numbr && b instanceof Numbr) {
           return apply((x, y) => x.mul(y), a, b, rates)
         }
