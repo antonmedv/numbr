@@ -4,7 +4,7 @@ import {
   CurrencyCode,
   CurrencyRates,
   findCurrencyCode,
-  findCurrencyInfo
+  findCurrencyInfo,
 } from './currencies'
 import {Markup} from './markup'
 import {Token} from './parser/lex'
@@ -29,7 +29,7 @@ export class Currency implements Node {
   kind: 'currency' = 'currency'
 
   constructor(
-    public token: Token
+    public token: Token,
   ) {
   }
 
@@ -78,7 +78,7 @@ export class Value implements Node {
 
   constructor(
     public value: Token,
-    public currency?: Currency
+    public currency?: Currency,
   ) {
   }
 
@@ -311,7 +311,7 @@ export class Binary implements Node {
 
       case '^':
         if (a instanceof Numbr && b instanceof Numbr) {
-          return apply((x, y) => x.pow(y.toNumber()), a, b, rates)
+          return apply((x, y) => x.pow(+y), a, b, rates)
         }
         if (a instanceof Numbr && b instanceof Percent) {
           return new Nothing()
@@ -320,7 +320,7 @@ export class Binary implements Node {
           return new Nothing()
         }
         if (a instanceof Percent && b instanceof Percent) {
-          return new Percent(a.value.pow(b.value.toNumber()))
+          return new Percent(a.value.pow(+b.value))
         }
         break
     }
@@ -329,15 +329,7 @@ export class Binary implements Node {
 
   highlight() {
     let markup: Markup = []
-    if (this.op.value == '^' &&
-      this.right instanceof Value
-      && this.op.end == this.right.value.start
-    ) {
-      markup.push([this.right.value.start, this.right.value.end, 'exp'])
-      markup.push([this.op.start, this.op.end, 'none'])
-    } else {
-      markup.push([this.op.start, this.op.end, 'operator'])
-    }
+    markup.push([this.op.start, this.op.end, 'operator'])
     markup.push(...this.left.highlight())
     markup.push(...this.right.highlight())
     return markup
@@ -469,7 +461,7 @@ export class Variable implements Node {
   kind: 'variable' = 'variable'
 
   constructor(
-    public token: Token
+    public token: Token,
   ) {
   }
 
@@ -496,7 +488,7 @@ export class Reference implements Node {
   kind: 'reference' = 'reference'
 
   constructor(
-    public token: Token
+    public token: Token,
   ) {
   }
 
