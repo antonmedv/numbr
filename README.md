@@ -26,3 +26,7 @@ calculations.
 - **Text Filtering**: Non-highlighted numbers in a line of text are treated as non-numerical text, making your calculations
 accurate and clear.
 - **Sharing**: Share your calculations by simply copying the current link address, allowing for easy collaboration.
+
+## Documentation
+
+[Documentation](./DOCS.md)
