@@ -74,5 +74,5 @@ spaces:
 ```
 iPhone 15 = $998
 AirPods Pro = $249
-Price difference: iphone 12 - airpods pro
+Price difference: iphone 15 - airpods pro
 ```
