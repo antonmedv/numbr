@@ -27,6 +27,7 @@ let cases: [string, Result][] = [
   ['100 - (5% + 5%)', numbr(90)],
   ['font-size: 20px;', numbr(20)],
   ['1 000 000', numbr(1000000)],
+  ['1\'000_000', numbr(1000000)],
   ['1 usd in rub', numbr(2, 'RUB')],
   ['100 + 25% in rub', numbr(125, 'RUB')],
   ['100 рублей в долларах', numbr(50, 'USD')],

@@ -89,7 +89,7 @@ export class Value implements Node {
     if (/M$/.test(s)) multiplier = 1e6
     if (s == '💯') s = '100'
 
-    s = s.replace(/[\s,]/g, '')
+    s = s.replace(/[\s,'_]/g, '')
       .replace(/k$/, '')
       .replace(/M$/, '')
     return new Numbr(Big(s).mul(multiplier), this.currency?.toCurrencyCode())

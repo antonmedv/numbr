@@ -219,7 +219,7 @@ function word(l: Lexer) {
 function scanNumber(l: Lexer) {
   let digits = /[0-9]/
   l.acceptRun(digits)
-  while (l.accept(/[\s,]/)) {
+  while (l.accept(/[\s,'_]/)) {
     if (l.accept(digits)) {
       l.acceptRun(digits)
     } else {
