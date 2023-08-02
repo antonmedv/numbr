@@ -1,5 +1,5 @@
 export const operators = {
-  addition: new Set(['+', '-']),
+  addition: new Set(['+', '-', '−']),
   multiplication: new Set(['*', 'x', 'х', '×', '/', '%']),
   into: new Set(['in', 'to', 'в']),
   of: new Set(['of', 'от']),

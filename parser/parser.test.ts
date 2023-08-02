@@ -96,8 +96,8 @@ let cases: [string, Node, Varname[]?][] = [
     new Value(n(0.05)),
   ],
   [
-    '-+0',
-    new Unary(op('-'), new Unary(op('+'), new Value(n(0)))),
+    '−-+0',
+    new Unary(op('−'), new Unary(op('-'), new Unary(op('+'), new Value(n(0))))),
   ],
   [
     'some-thing is -5',

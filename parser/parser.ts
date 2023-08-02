@@ -160,7 +160,7 @@ function power(p: Parser): Node {
 }
 
 function unary(p: Parser): Node {
-  if (p.is('operator', '-', '+')) {
+  if (p.is('operator', '-', '−', '+')) {
     let token = p.current
     p.next()
     p.skip()

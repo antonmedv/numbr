@@ -182,7 +182,7 @@ export class Unary implements Node {
   evaluate(ctx: Context): Result {
     let v = this.node.evaluate(ctx)
 
-    if (this.op.value == '-') {
+    if (this.op.value == '-' || this.op.value == '−') {
       if (v instanceof Numbr) {
         return new Numbr(v.value.mul(-1), v.currency)
       }
@@ -242,6 +242,7 @@ export class Binary implements Node {
         break
 
       case '-':
+      case '−':
         if (a instanceof Numbr && b instanceof Numbr) {
           return apply((x, y) => x.minus(y), a, b, rates)
         }

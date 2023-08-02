@@ -18,6 +18,7 @@ let cases: [string, Result][] = [
   ['1+2*3', numbr(7)],
   ['0.05', numbr(0.05)],
   ['-+0', numbr(-0)],
+  ['−1', numbr(-1)],
   ['(1 - ', numbr(1)],
   ['1 * 2 %', numbr(2)],
   ['2x20', numbr(40)],
