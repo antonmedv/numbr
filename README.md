@@ -1,4 +1,4 @@
-<h1><img src="https://numbr.dev/numbr-logo.png" alt="Numbr logo" width="38" height="38"> Numbr</h1>
+<h1><img src="https://numbr.dev/numbr-logo.png" alt="Numbr logo" width="38" height="38" align="center"> Numbr</h1>
 
 *Numbr – a short for number.*
 
@@ -30,3 +30,7 @@ accurate and clear.
 ## Documentation
 
 [Documentation](./DOCS.md)
+
+## Become a sponsor
+
+Every line of code in my repositories 📖 signifies my unwavering commitment to open source 💡. Your support 🤝 ensures these projects keep thriving, innovating, and benefiting all 💼. If my work has ever resonated 🎵 or helped you, kindly consider showing love ❤️ by sponsoring. [**🚀 Sponsor Me Today! 🚀**](https://github.com/sponsors/antonmedv)
