@@ -85,8 +85,12 @@ export class Value implements Node {
   evaluate(ctx: Context): Result {
     let s = this.value.value
     let multiplier = 1
-    if (/k$/.test(s)) multiplier = 1e3
+    if (/µ$/.test(s)) multiplier = 1e-6
+    if (/m$/.test(s)) multiplier = 1e-3
+    if (/k$/.test(s) || /K$/.test(s)) multiplier = 1e3
     if (/M$/.test(s)) multiplier = 1e6
+    if (/B$/.test(s)) multiplier = 1e9
+    if (/T$/.test(s)) multiplier = 1e12
     if (s == '💯') s = '100'
 
     s = s.replace(/[\s,'_]/g, '')
